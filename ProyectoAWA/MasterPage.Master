@@ -1,0 +1,44 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.Master.cs" Inherits="ProyectoAWA.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Warcraft Friends</title>
+    <link href="styles/pages.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="header">
+        <h1>Warcraft Friends</h1>
+        <div class="button-container">
+            <button class="signup" onclick="window.location.href='/pages/auth/signUp.aspx'">Sign Up</button>
+            <button class="login" onclick="window.location.href='/pages/auth/logIn.aspx'">Login</button>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.aspx">Home</a></li>
+            <li><a href="/pages/chat.aspx">Chat</a></li>
+            <li><a href="/pages/characters.aspx">Characters</a></li>
+            <li><a href="/pages/characterForm.aspx">Add Characters</a></li>
+        </ul>
+    </nav>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>© 2023 Warcraft Friends. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Política de privacidad</a> |
+                <a href="#">Términos de servicio</a>
+            </div>
+            <div class="footer-social">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
