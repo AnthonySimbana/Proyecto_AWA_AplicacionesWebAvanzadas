@@ -82,8 +82,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BD-Model\" />
-    <Folder Include="BD-Scripts\" />
+    <Folder Include="BDD-Model\" />
+    <Folder Include="BDD-Scripts\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
