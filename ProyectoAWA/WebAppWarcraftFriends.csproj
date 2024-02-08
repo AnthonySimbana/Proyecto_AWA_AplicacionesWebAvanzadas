@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProyectoAWA</RootNamespace>
-    <AssemblyName>ProyectoAWA</AssemblyName>
+    <RootNamespace>WebAppWarcraftFriends</RootNamespace>
+    <AssemblyName>WebAppWarcraftFriends</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -81,52 +81,61 @@
     <Content Include="styles\pages.css" />
     <Content Include="styles\styles.css" />
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
     </Compile>
     <Compile Include="pages\auth\logIn.aspx.cs">
       <DependentUpon>logIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\auth\logIn.aspx.designer.cs">
       <DependentUpon>logIn.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\auth\resetPwd.aspx.cs">
       <DependentUpon>resetPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\auth\resetPwd.aspx.designer.cs">
       <DependentUpon>resetPwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\auth\signUp.aspx.cs">
       <DependentUpon>signUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\auth\signUp.aspx.designer.cs">
       <DependentUpon>signUp.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\characterForm.aspx.cs">
       <DependentUpon>characterForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\characterForm.aspx.designer.cs">
       <DependentUpon>characterForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\characters.aspx.cs">
       <DependentUpon>characters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\characters.aspx.designer.cs">
       <DependentUpon>characters.aspx</DependentUpon>
     </Compile>
     <Compile Include="pages\chat.aspx.cs">
       <DependentUpon>chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="pages\chat.aspx.designer.cs">
       <DependentUpon>chat.aspx</DependentUpon>
@@ -136,6 +145,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

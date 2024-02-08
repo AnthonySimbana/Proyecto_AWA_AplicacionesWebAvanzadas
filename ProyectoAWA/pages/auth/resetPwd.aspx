@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="resetPwd.aspx.cs" Inherits="ProyectoAWA.pages.resetPwd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="resetPwd.aspx.cs" Inherits="WebAppWarcraftFriends.pages.resetPwd" %>
 
 <!DOCTYPE html>
 

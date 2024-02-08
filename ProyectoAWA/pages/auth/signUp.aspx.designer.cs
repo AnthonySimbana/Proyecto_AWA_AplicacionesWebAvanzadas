@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProyectoAWA.pages
+namespace WebAppWarcraftFriends.pages
 {
 
 

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signUp.aspx.cs" Inherits="ProyectoAWA.pages.singUp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="signUp.aspx.cs" Inherits="WebAppWarcraftFriends.pages.singUp" %>
 
 <!DOCTYPE html>
 
