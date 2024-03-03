@@ -5,26 +5,30 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h2>Add Character</h2>
 
-    <form id="formAgregarPersonaje" runat="server" action="/agregar-personaje" method="POST">
+    <form id="formAgregarPersonaje" runat="server">
+        <div>
+            <label for="ddlRegion">Región:</label>
+            <asp:DropDownList ID="ddlRegion" runat="server" ClientIDMode="Static">
+                <asp:ListItem Value="us">US</asp:ListItem>
+                <asp:ListItem Value="eu">EU</asp:ListItem>
+            </asp:DropDownList>
+        </div>
 
-        <label for="region">Región:</label>
-        <select id="ddlRegion" name="ddlRegion" runat="server" required>
-            <option value="us">US</option>
-            <option value="eu">EU</option>
-        </select>
-        <br>
+        <div>
+            <label for="ddlRealm">Reino:</label>
+            <asp:DropDownList ID="ddlRealm" runat="server" ClientIDMode="Static">
+                <asp:ListItem Value="quelthalas">Quel'Thalas</asp:ListItem>
+                <asp:ListItem Value="ragnaros">Ragnaros</asp:ListItem>
+            </asp:DropDownList>
+        </div>
 
-        <select id="ddlRealm" name="ddlRealm" runat="server" required>
-            <option value="quelthalas">Quel'Thalas</option>
-            <option value="ragnaros">Ragnaros</option>
-        </select>
-        <br>
+        <div>
+            <label for="txtName">Nombre del personaje:</label>
+            <asp:TextBox ID="txtName" runat="server" ClientIDMode="Static" placeholder="Ingrese el nombre del personaje" required></asp:TextBox>
+        </div>
 
-        <input type="text" id="txtName" name="txtName" runat="server" placeholder="Ingrese el nombre del personaje" required>
-        <br>
-
-
-        <button type="button" onclick="AgregarPersonaje_Click()">Agregar Personaje</button>
-
+        <div>
+            <asp:Button ID="btnAgregarPersonaje" runat="server" Text="Agregar Personaje" OnClick="btnAgregarPersonaje_Click" UseSubmitBehavior="false" />
+        </div>
     </form>
 </asp:Content>

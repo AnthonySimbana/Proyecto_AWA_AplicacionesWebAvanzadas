@@ -30,7 +30,7 @@ namespace WebAppWarcraftFriends.pages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlRegion;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRegion;
 
         /// <summary>
         /// ddlRealm control.
@@ -39,7 +39,7 @@ namespace WebAppWarcraftFriends.pages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect ddlRealm;
+        protected global::System.Web.UI.WebControls.DropDownList ddlRealm;
 
         /// <summary>
         /// txtName control.
@@ -48,6 +48,15 @@ namespace WebAppWarcraftFriends.pages
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtName;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
+
+        /// <summary>
+        /// btnAgregarPersonaje control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarPersonaje;
     }
 }

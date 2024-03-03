@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Web.Script.Serialization;
 using System.Web.Services;
@@ -21,49 +22,48 @@ namespace MicroServiceWCFCharacter
     {
 
         [WebMethod]
-
-        public EWarcraftFriends.Character GetCharacterDetails(string region, string realm, string name)
+        public EWarcraftFriends.CharacterInfo GetCharacterDetails(string region, string realm, string name)
         {
-            string apiUrl = $"https://raider.io/api/v1/characters/profile?region={region}&realm={realm}&name={name}";
-
             try
             {
-                using (WebClient client = new WebClient())
-                {
-                    string response = client.DownloadString(apiUrl);
-
-                    JObject jsonResponse = JObject.Parse(response);
-
-                    EWarcraftFriends.Character characterInfo = new EWarcraftFriends.Character
-                    {
-                        Class = jsonResponse.SelectToken("class")?.Value<string>() ?? "",
-                        Faction = jsonResponse.SelectToken("faction")?.Value<string>() ?? "",
-                        Gender = jsonResponse.SelectToken("gender")?.Value<string>() ?? "",
-                        Name = jsonResponse.SelectToken("name")?.Value<string>() ?? "",
-                        Realm = jsonResponse.SelectToken("realm")?.Value<string>() ?? "",
-                        Region = jsonResponse.SelectToken("region")?.Value<string>() ?? "",
-                        Race = jsonResponse.SelectToken("race")?.Value<string>() ?? "",
-                        ThumbnailUrl = jsonResponse.SelectToken("thumbnail_url")?.Value<string>() ?? ""
-                    };
-
-                    return characterInfo;
-                }
+                string apiUrl = $"https://raider.io/api/v1/characters/profile?region={region}&realm={realm}&name={name}";
+                string response = MakeWebRequest(apiUrl);
+                return ParseCharacterDetails(response);
             }
-            catch (WebException ex)
+            catch (Exception ex)
             {
-                // Retornar un valor indicativo de error, por ejemplo, -1
-                return new EWarcraftFriends.Character
-                {
-                    Class = ex.Message,
-                    Faction = ex.Message,
-                    Gender = ex.Message,
-                    Name = ex.Message,
-                    Realm = ex.Message,
-                    Region = ex.Message,
-                    Race = ex.Message,
-                    ThumbnailUrl = ex.Message,
-                };
+                LogError(ex);
+                return new EWarcraftFriends.CharacterInfo();
             }
+        }
+
+        private string MakeWebRequest(string apiUrl)
+        {
+            using (HttpClient client = new HttpClient())
+            {
+                return client.GetStringAsync(apiUrl).Result;
+            }
+        }
+
+        private EWarcraftFriends.CharacterInfo ParseCharacterDetails(string response)
+        {
+            JObject jsonResponse = JObject.Parse(response);
+
+            return new EWarcraftFriends.CharacterInfo
+            {
+                Class = jsonResponse.SelectToken("class")?.Value<string>() ?? "",
+                Faction = jsonResponse.SelectToken("faction")?.Value<string>() ?? "",
+                Gender = jsonResponse.SelectToken("gender")?.Value<string>() ?? "",
+                Name = jsonResponse.SelectToken("name")?.Value<string>() ?? "",
+                Realm = jsonResponse.SelectToken("realm")?.Value<string>() ?? "",
+                Region = jsonResponse.SelectToken("region")?.Value<string>() ?? "",
+                Race = jsonResponse.SelectToken("race")?.Value<string>() ?? "",
+                ThumbnailUrl = jsonResponse.SelectToken("thumbnail_url")?.Value<string>() ?? ""
+            };
+        }
+
+        private void LogError(Exception ex)
+        {
         }
     }
 }

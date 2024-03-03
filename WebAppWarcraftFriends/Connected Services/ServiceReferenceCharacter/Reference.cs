@@ -15,9 +15,9 @@ namespace WebAppWarcraftFriends.ServiceReferenceCharacter {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Character", Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CharacterInfo", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
-    public partial class Character : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CharacterInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -263,12 +263,12 @@ namespace WebAppWarcraftFriends.ServiceReferenceCharacter {
     public partial class GetCharacterDetailsResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public WebAppWarcraftFriends.ServiceReferenceCharacter.Character GetCharacterDetailsResult;
+        public WebAppWarcraftFriends.ServiceReferenceCharacter.CharacterInfo GetCharacterDetailsResult;
         
         public GetCharacterDetailsResponseBody() {
         }
         
-        public GetCharacterDetailsResponseBody(WebAppWarcraftFriends.ServiceReferenceCharacter.Character GetCharacterDetailsResult) {
+        public GetCharacterDetailsResponseBody(WebAppWarcraftFriends.ServiceReferenceCharacter.CharacterInfo GetCharacterDetailsResult) {
             this.GetCharacterDetailsResult = GetCharacterDetailsResult;
         }
     }
@@ -305,7 +305,7 @@ namespace WebAppWarcraftFriends.ServiceReferenceCharacter {
             return base.Channel.GetCharacterDetails(request);
         }
         
-        public WebAppWarcraftFriends.ServiceReferenceCharacter.Character GetCharacterDetails(string region, string realm, string name) {
+        public WebAppWarcraftFriends.ServiceReferenceCharacter.CharacterInfo GetCharacterDetails(string region, string realm, string name) {
             WebAppWarcraftFriends.ServiceReferenceCharacter.GetCharacterDetailsRequest inValue = new WebAppWarcraftFriends.ServiceReferenceCharacter.GetCharacterDetailsRequest();
             inValue.Body = new WebAppWarcraftFriends.ServiceReferenceCharacter.GetCharacterDetailsRequestBody();
             inValue.Body.region = region;

@@ -163,10 +163,10 @@
   <ItemGroup>
     <Content Include="MasterPage.Master" />
     <None Include="Connected Services\ServiceReferenceCharacter\MicroServiceCharacter.wsdl" />
-    <Content Include="Connected Services\ServiceReferenceCharacter\WebAppWarcraftFriends.ServiceReferenceCharacter.Character.datasource">
+    <Content Include="Connected Services\ServiceReferenceCharacter\WebAppWarcraftFriends.ServiceReferenceCharacter.GetCharacterDetailsResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReferenceCharacter\WebAppWarcraftFriends.ServiceReferenceCharacter.GetCharacterDetailsResponse.datasource">
+    <Content Include="Connected Services\ServiceReferenceCharacter\WebAppWarcraftFriends.ServiceReferenceCharacter.CharacterInfo.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="packages.config" />
@@ -188,6 +188,12 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReferenceCharacter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EWarcraftFriends\EWarcraftFriends.csproj">
+      <Project>{67dbb196-7380-442a-923e-f7d301b91e36}</Project>
+      <Name>EWarcraftFriends</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

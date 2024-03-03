@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace EWarcraftFriends
 {
-    public class Character
+    public class CharacterInfo
     {
-        private string main = false;
-
         public string Class { get; set; }
         public string Faction { get; set; }
         public string Gender { get; set; }
