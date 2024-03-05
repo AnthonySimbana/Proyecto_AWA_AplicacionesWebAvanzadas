@@ -24,7 +24,7 @@ namespace WebAppWarcraftFriends.pages
                 string realm = ddlRealm.SelectedValue;
                 string name = txtName.Text;
                 MicroServiceCharacterSoapClient client = new MicroServiceCharacterSoapClient();
-                EWarcraftFriends.CharacterInfo character = client.GetCharacterDetails(region, realm, name);
+                CharacterInfo character = client.GetCharacterDetails(region, realm, name);
             }
             catch (Exception ex)
             {
