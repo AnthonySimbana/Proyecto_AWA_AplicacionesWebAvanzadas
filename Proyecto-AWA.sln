@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MicroServices", "MicroServi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EWarcraftFriends", "EWarcraftFriends\EWarcraftFriends.csproj", "{67DBB196-7380-442A-923E-F7D301B91E36}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceUser", "MicroServices\MicroServiceUsuarios\MicroServiceUser.csproj", "{B7E6DD18-D699-415C-BD71-B96F1BBF2F98}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCharacter", "WebApplication2\MicroServiceCharacter.csproj", "{A1763565-5700-4CDD-9D51-191F11717E00}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebsocktChatRoom", "MicroServices\WebsocktChatRoom\WebsocktChatRoom.csproj", "{EDA3D8CD-97F1-42A0-B867-0D5303671908}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceUser", "MicroServices\MicroServiceUser\MicroServiceUser.csproj", "{053C55E3-A9BB-4E26-AE32-1CB6F00D28CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCharacter", "MicroServices\MicroServiceCharacter\MicroServiceCharacter.csproj", "{6977CD83-4CDB-46CF-9336-451A13B33677}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,26 +29,26 @@ Global
 		{67DBB196-7380-442A-923E-F7D301B91E36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67DBB196-7380-442A-923E-F7D301B91E36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67DBB196-7380-442A-923E-F7D301B91E36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B7E6DD18-D699-415C-BD71-B96F1BBF2F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B7E6DD18-D699-415C-BD71-B96F1BBF2F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B7E6DD18-D699-415C-BD71-B96F1BBF2F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B7E6DD18-D699-415C-BD71-B96F1BBF2F98}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A1763565-5700-4CDD-9D51-191F11717E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1763565-5700-4CDD-9D51-191F11717E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1763565-5700-4CDD-9D51-191F11717E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1763565-5700-4CDD-9D51-191F11717E00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EDA3D8CD-97F1-42A0-B867-0D5303671908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EDA3D8CD-97F1-42A0-B867-0D5303671908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDA3D8CD-97F1-42A0-B867-0D5303671908}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDA3D8CD-97F1-42A0-B867-0D5303671908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{053C55E3-A9BB-4E26-AE32-1CB6F00D28CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{053C55E3-A9BB-4E26-AE32-1CB6F00D28CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{053C55E3-A9BB-4E26-AE32-1CB6F00D28CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{053C55E3-A9BB-4E26-AE32-1CB6F00D28CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6977CD83-4CDB-46CF-9336-451A13B33677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6977CD83-4CDB-46CF-9336-451A13B33677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6977CD83-4CDB-46CF-9336-451A13B33677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6977CD83-4CDB-46CF-9336-451A13B33677}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B7E6DD18-D699-415C-BD71-B96F1BBF2F98} = {6247A884-7AB2-4F26-BBEF-68B564431F0B}
-		{A1763565-5700-4CDD-9D51-191F11717E00} = {6247A884-7AB2-4F26-BBEF-68B564431F0B}
 		{EDA3D8CD-97F1-42A0-B867-0D5303671908} = {6247A884-7AB2-4F26-BBEF-68B564431F0B}
+		{053C55E3-A9BB-4E26-AE32-1CB6F00D28CC} = {6247A884-7AB2-4F26-BBEF-68B564431F0B}
+		{6977CD83-4CDB-46CF-9336-451A13B33677} = {6247A884-7AB2-4F26-BBEF-68B564431F0B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA5CB5A6-03AB-4A24-BBF2-02B9EAA3259C}
