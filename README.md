@@ -16,6 +16,9 @@ Chat comunitario diseñado para jugadores de Warcraft. Los usuarios pueden acced
 
 Para replicar el proyecto:
 Abrir Visual Studio, clonar el repositorio.
-Ejecutar los microservicios (MicroServiceCharacter, MicroServiceUser, WebsocktChatRoom) without debug y finalemnte ejecutar el aplicativo principal (WebAppWarcraftFriends)
+Ejecutar los microservicios (MicroServiceCharacter, MicroServiceUser, WebsocktChatRoom) without debug y finalmente ejecutar el aplicativo principal (WebAppWarcraftFriends)
 
-El proyecto se encuentra conectado a una base de datos en Azure, se debe configurar la conexion a la base de datos
+El proyecto se encuentra conectado a una base de datos en Azure la cual se encuentra desactiva, se debe configurar una nueva conexion a la base de datos en los appsetings.json de cada microservicio.
+
+El microservicio de websockets no se encuentra conectado a ninguna base de datos.
+
