@@ -25,6 +25,7 @@ namespace WebAppWarcraftFriends.pages
                 string name = txtName.Text;
                 MicroServiceCharacterSoapClient client = new MicroServiceCharacterSoapClient();
                 CharacterInfo character = client.GetCharacterDetails(region, realm, name);
+                Console.WriteLine("HolA");
             }
             catch (Exception ex)
             {
